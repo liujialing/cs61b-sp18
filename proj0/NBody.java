@@ -1,5 +1,4 @@
 public class NBody {
-	private static String IMAGE_PATH = "images/";
 
 	public static double readRadius(String filename) {
 		In in = new In(filename);
@@ -21,7 +20,7 @@ public class NBody {
 				in.readDouble(), 
 				in.readDouble(), 
 				in.readDouble(), 
-				IMAGE_PATH + in.readString()
+				in.readString()
 			);
 			i++;
 		}
@@ -66,7 +65,7 @@ public class NBody {
 		for (int i = 0; i < planets.length; i++) {
 			StdOut.printf("%11.4e %11.4e %11.4e %11.4e %11.4e %12s\n",
 					planets[i].xxPos, planets[i].yyPos, planets[i].xxVel,
-					planets[i].yyVel, planets[i].mass, planets[i].imgFileName.replace(IMAGE_PATH,""));
+					planets[i].yyVel, planets[i].mass, planets[i].imgFileName);
 		}
 	}
 

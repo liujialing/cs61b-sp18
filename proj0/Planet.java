@@ -1,5 +1,6 @@
 public class Planet {
 	private static double G = 6.67 * Math.pow(10, -11);
+	private static String IMAGE_PATH = "images/";
 
 	public double xxPos;
 	public double yyPos;
@@ -75,6 +76,6 @@ public class Planet {
 	}
 
 	public void draw() {
-		StdDraw.picture(xxPos, yyPos, imgFileName);
+		StdDraw.picture(xxPos, yyPos, IMAGE_PATH + imgFileName);
 	}
 }
